@@ -1624,5 +1624,12 @@ setTimeout(()=>{
 </script>
 
 <p style="text-align:center;font-size:11px;color:var(--text3);padding:2rem 0 3rem;font-family:var(--mono)">Protocol v2.0 &middot; April 2025 &middot; Review monthly</p>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registered"))
+      .catch(err => console.log("Service Worker failed", err));
+  }
+</script>
 </body>
 </html>
